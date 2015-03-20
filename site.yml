@@ -1,0 +1,7 @@
+---
+# Master yml file
+
+- hosts: lang
+  roles:
+    - { role: python, when: lang_name == 'python' }
+

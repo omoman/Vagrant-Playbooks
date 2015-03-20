@@ -1,0 +1,14 @@
+---
+# This playbook sets up most of what you would
+# want in a python dev machine
+
+- name: Install Pip, Virtualenv, and Setuptools
+  apt: >
+    name={{ item }}
+    update_cache=yes
+    state=latest
+  with_items:
+    - python-pip
+    - python-virtualenv
+    - python-setuptools
+
