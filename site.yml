@@ -26,3 +26,7 @@
   roles:
     - mongodb
 
+- hosts: mysql-group
+  roles:
+    - mysql
+

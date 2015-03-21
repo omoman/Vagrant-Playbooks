@@ -1,0 +1,12 @@
+---
+# This playbook installs and configures mysql
+
+- name: Install mysql server and client
+  apt: >
+    name={{ item }}
+    update_cache=yes
+    state=latest
+  with_items:
+    - mysql-server
+    - mysql-client
+    
