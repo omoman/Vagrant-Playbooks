@@ -5,3 +5,7 @@
   roles:
     - python
 
+- hosts: node-dev
+  roles:
+    - nodejs
+
