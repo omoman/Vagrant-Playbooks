@@ -1,0 +1,22 @@
+---
+# This playbook installs and configures the entire mongodb
+# tool set
+
+- name: Add mongodb gpg keys
+  apt_key: >
+    keyserver=keyserver.ubuntu.com
+    id=7F0CEB10
+    state=present
+
+- name: Add mongodb repolist
+  copy: >
+    src=mongodb-org-3.0.list
+    dest=/etc/apt/sources.list.d/mongodb-org-3.0.list
+    mode=0644
+
+- name: Install mongo org
+  apt: >
+    name=mongodb-org
+    state=latest
+    update_cache=yes
+
