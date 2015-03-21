@@ -1,0 +1,12 @@
+---
+# This playbook sets up most of what you would want in a php dev machine
+
+- name: Install php5
+  apt: >
+    name=php5
+    update_cache=yes
+    state=latest
+
+- name: Install composer
+  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+
