@@ -1,7 +1,7 @@
 ---
 # Master yml file
 
-- hosts: python_lang
+- hosts: python-dev
   roles:
     - python
 
