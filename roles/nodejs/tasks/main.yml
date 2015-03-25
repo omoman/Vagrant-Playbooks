@@ -10,5 +10,5 @@
 - name: Install nodejs and npm
   apt: >
     name=nodejs
-    state=present
+    state=latest
 
